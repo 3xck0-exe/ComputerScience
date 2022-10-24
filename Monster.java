@@ -1,4 +1,4 @@
-class monster     //class heading
+class Monster     //class heading
 {
   private boolean haveEyes;     //instance variable/data members
   private int numEyes;
