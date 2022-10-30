@@ -51,14 +51,10 @@ class vendingMachine {
         }catch(InterruptedException ex){
         }
         slowPrint("Anyways. ");
-        
-        while(true){
-
-        
         slowPrint("Here are the selections provided.");
         System.out.println("");
         System.out.println("-------------------------------------------------------------------");
-        System.out.println("1 : Skittles - $2.00 \n2 : Doritos - $1.50 \n3 : Reese's Peanut Butter Cups - $2.00 \n4 : Snickers Bar - $1.50 \n5 : Pop-Tarts - $2.00 \n6 : Granola Bar - $1.50 \n7 : Cheeze-its - $0.50 \n8 : Chex Mix - $3.25 \n9 : Pretzels - $1.50 \n10 : Water bottle - $1.50 \n11 : Monster Energy - $2.75 \n12 : Coffee Milk - $3.00 \n13 : Strawberry Milk - $3.00 \n14 : Strawberry Lemonade - $2.50 \n15 : Secret Item - $9000.00");
+        System.out.println("1 : Skittles - $2.00 \n2 : Doritos - $1.50 \n3 : Reese's Peanut Butter Cups - $2.00 \n4 : Snickers Bar - $1.50 \n5 : Pop-Tarts - $2.00 \n6 : Granola Bar - $1.50 \n7 : Cheeze-its - $0.50 \n8 : Chex Mix - $3.25 \n9 : Pretzels - $1.50 \n10 : Water bottle - $1.50 \n11 : Monster Energy - $2.75 \n12 : Coffee Milk - $3.00 \n13 : Strawberry Milk - $3.00 \n14 : Strawberry Lemonade - $2.50 \n15 : Secret Item - $9000.00 \n16 : Quit");
         System.out.println("-------------------------------------------------------------------");
         System.out.print("Enter In The Ammount Of Dollars You Have, If You Don't Have Dollars Type 0 -> : ");
         int Dollars1 = input.nextInt(); 
@@ -72,21 +68,67 @@ class vendingMachine {
         double Total2 = Quarters * Quarters1;
         double Total3 = Dimes * Dimes1;
         double Total4 = Nickles * Nickles1; 
-        double Ammount = Total1 + Total2 + Total3 + Total4;
+        double amount = Total1 + Total2 + Total3 + Total4;
         
-        slowPrint("You have - $" +  Ammount + ". Please type your selection here -> : ");
+        slowPrint("You have - $" +  amount + ". Please type your selection here word for word -> : ");
         String choice = input.nextLine().toLowerCase();
         
-
+          if(choice == "skittles"){
+          slowPrint("Vending Skittles... ");
+          amount = amount - Skittles;
+        } else if(choice == "doritos"){
+          slowPrint("Vending Doritos... ");
+          amount = amount - Doritos;
+        } else if(choice == "reese's peanut butter cups"){
+          slowPrint("Vending Reese's Peanut Butter Cups... ");
+          amount = amount - RPBC;
+        } else if(choice == "snickers bar"){
+          slowPrint("Vending Snickers Bar... ");
+          amount = amount - Snickers;
+        } else if(choice == "pop-tarts"){
+          slowPrint("Vending Pop-Tarts... ");
+          amount = amount - popTarts;
+        } else if(choice == "granola bar"){
+          slowPrint("Vending Granola Bar... ");
+          amount = amount - granolaBar;
+        } else if(choice == "cheese-its"){
+          slowPrint("Vending Cheese-Its... ");
+          amount = amount - cheeseIts; 
+        } else if(choice == "chex mix"){
+          slowPrint("Vending Chex Mix... ");
+          amount = amount - chexMix;
+        } else if(choice == "pretzels"){
+          slowPrint("Vending Pretzels... ");
+          amount = amount - Pretzels;
+        } else if(choice == "water bottle"){
+          slowPrint("Vending Water Bottle... ");
+          amount = amount - waterBottle;
+        } else if(choice == "monster energy"){
+          slowPrint("Vending Monster Energy... ");
+          amount = amount - monsterEnergy;
+        } else if(choice == "coffee milk"){
+          slowPrint("Vending Coffee Milk... ");
+          amount = amount - coffeeMilk;
+        } else if(choice == "strawberry milk"){
+          slowPrint("Vending Strawberry Milk... ");
+          amount = amount - strawberryMilk;
+        } else if(choice == "strawberry lemonade"){
+          slowPrint("Vending Strawberry Lemonade... ");
+          amount = amount - strabberryLemonade;
+        } else if(choice == "secret item"){
+          slowPrint("Vending Secret Item... ");
+          amount = amount - secretItem;
+        } else if(choice == "quit"){
+          slowPrint("Thank you for using the vender bender machine...goodbye. ");
+          
         } 
-        } 
-      
 
+        
 //Make a fucntion where you take in information and whatever that number is, add it to the ammount of money
 // for etc input = 3, make the input ammount add to dollars or quarters etc and that adds the amount of money we have
 //so 3 + dollars = 3.00 or 3 + quarters == 0.75
-
-    }
+      }
+    
   public static void slowPrint(String output) { //creating slowPrint object 
     for (int i = 0; i<output.length(); i++) {
       char c = output.charAt(i);
@@ -96,10 +138,11 @@ class vendingMachine {
       }
       catch (Exception e) {
 
+        }
       }
-    }
+   }
   }
-}
+
 /*Soda Machine
 
 -Process
