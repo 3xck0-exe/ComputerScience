@@ -1,5 +1,6 @@
-//  Created by Sp1d3rH3X 
-
+//  Created by Exck0 
+//  Last Modified 7/11/2023
+//  Description: A vending machine that takes in a users input and gives them a item based on the ammount of money they have.
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -8,16 +9,17 @@ class vendingMachine {
 
     public static void main(String[] args)
     {
-      // Scanner for inputint user value
+      // Scanner for input int user value
         Scanner input = new Scanner(System.in);
       // Currency
         double Dollars = 1.00;
         double Quarters = 0.25;
         double Dimes = 0.10;
         double Nickles = 0.05; 
-      // Items and there pricing
+      // Items and there pricing + going to make a 3/5 2d array list that  will store each item and its pricing, then I will take a users input for the amount they provided 
+      // and I will make some action that happens when the item is picked and its correct after going through a error check
         double Skittles = 2.00;
-        double Doritos = 1.50;
+        double Doritos = 1.5
         double RPBC = 2.00;
         double Snickers = 1.50;
         double popTarts = 2.00;
@@ -32,38 +34,45 @@ class vendingMachine {
         double strabberryLemonade = 2.50;
         double secretItem = 9000.00;
 
-
-            slowPrint("...01001000 01100101 01101100 01101100 01101111 00111111");
-        System.out.println("");
-        try{
-        Thread.sleep(1000);
-        }catch(InterruptedException ex){
-        }
-        slowPrint("Sorry about that. ");
-        try{
-        Thread.sleep(1000);
-        }catch(InterruptedException ex){
-        }
-        slowPrint("Seems like my creator forgot to turn my language compiler on.");
-        System.out.println("");
-        try{
-        Thread.sleep(1000);
-        }catch(InterruptedException ex){
-        }
+        slowPrint("...01001000 01100101 01101100 01101100 01101111 00111111" + "\n");
+      try{Thread.sleep(1000);}catch(InterruptedException ex){}
+        slowPrint("Sorry about that. " + "\n");
+      try{Thread.sleep(1000);}catch(InterruptedException ex){}
+        slowPrint("Seems like my creator forgot to turn my language compiler on." + "\n");
+      try{Thread.sleep(1000);}catch(InterruptedException ex){}
         slowPrint("Anyways. ");
-        slowPrint("Here are the selections provided.");
-        System.out.println("");
-        System.out.println("-------------------------------------------------------------------");
-        System.out.println("1 : Skittles - $2.00 \n2 : Doritos - $1.50 \n3 : Reese's Peanut Butter Cups - $2.00 \n4 : Snickers Bar - $1.50 \n5 : Pop-Tarts - $2.00 \n6 : Granola Bar - $1.50 \n7 : Cheeze-its - $0.50 \n8 : Chex Mix - $3.25 \n9 : Pretzels - $1.50 \n10 : Water bottle - $1.50 \n11 : Monster Energy - $2.75 \n12 : Coffee Milk - $3.00 \n13 : Strawberry Milk - $3.00 \n14 : Strawberry Lemonade - $2.50 \n15 : Secret Item - $9000.00 \n16 : Quit");
-        System.out.println("-------------------------------------------------------------------");
-        System.out.print("Enter In The Ammount Of Dollars You Have, If You Don't Have Dollars Type 0 -> : ");
-        int Dollars1 = input.nextInt(); 
-        System.out.println("Enter In The Ammount Of Quarters You Have, If You Don't Have Dollars Type 0 -> : ");
+        slowPrint("Here are the selections provided." + "\n");
+      System.out.println("-------------------------------------------------------------------");
+      System.out.println("1 : Skittles - $2.00 \n2 : Doritos - $1.50 \n3 : Reese's Peanut Butter Cups - $2.00 \n4 : Snickers Bar - $1.50 \n5 : Pop-Tarts - $2.00 \n6 : Granola Bar - $1.50 \n7 : Cheeze-its - $0.50 \n8 : Chex Mix - $3.25 \n9 : Pretzels - $1.50 \n10 : Water bottle - $1.50 \n11 : Monster Energy - $2.75 \n12 : Coffee Milk - $3.00 \n13 : Strawberry Milk - $3.00 \n14 : Strawberry Lemonade - $2.50 \n15 : Secret Item - $9000.00 \n16 : Quit");
+      System.out.println("-------------------------------------------------------------------");
+      System.out.print("Enter In The Ammount Of Dollars You Have, If You Don't Have Dollars Type 0 -> : ");
+        int Dollars1 = input.nextInt();
+          while(Dollars1 > 1000 || Dollars1 < 0)
+            {           
+             System.out.print("Error! Please enter a valid number: ");
+             Dollars1 = input.nextInt();
+            }
+      System.out.println("Enter In The Ammount Of Quarters You Have, If You Don't Have Dollars Type 0 -> : ");
         int Quarters1 = input.nextInt();
-        System.out.println("Enter In The Ammount Of Dimes You Have, If You Don't Have Dimes Type 0 -> : ");
+          while(Quarters1 > 1000 || Quarters1 < 0)
+            {           
+             System.out.print("Error! Please enter a valid number: ");
+             Quarters1 = input.nextInt();
+            }
+      System.out.println("Enter In The Ammount Of Dimes You Have, If You Don't Have Dimes Type 0 -> : ");
         int Dimes1 = input.nextInt();
-        System.out.println("Enter In The Ammount Of Nickles You Have, If You Don't Have Nickles Type 0 -> : ");
+          while(Dimes1 > 1000 || Dimes1 < 0)
+            {           
+             System.out.print("Error! Please enter a valid number: ");
+             Dimes1 = input.nextInt();
+            }
+      System.out.println("Enter In The Ammount Of Nickles You Have, If You Don't Have Nickles Type 0 -> : ");
         int Nickles1 = input.nextInt();
+          while(Nickles1 > 1000 || Nickles1 < 0)
+            {           
+             System.out.print("Error! Please enter a valid number: ");
+             Nickles1 = input.nextInt();
+            }
         double Total1 = Dollars * Dollars1; 
         double Total2 = Quarters * Quarters1;
         double Total3 = Dimes * Dimes1;
