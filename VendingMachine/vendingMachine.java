@@ -19,7 +19,7 @@ class vendingMachine {
       // Items and there pricing + going to make a 3/5 2d array list that  will store each item and its pricing, then I will take a users input for the amount they provided 
       // and I will make some action that happens when the item is picked and its correct after going through a error check
         double Skittles = 2.00;
-        double Doritos = 1.5
+        double Doritos = 1.50;
         double RPBC = 2.00;
         double Snickers = 1.50;
         double popTarts = 2.00;
